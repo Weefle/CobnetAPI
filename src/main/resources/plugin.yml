@@ -1,0 +1,20 @@
+name: CobnetCore
+main: fr.cobnet.core.CobnetCore
+version: 1.1.0
+softdepend: [Cobby, ChunkNorris]
+author: Cobnet
+commands:
+   lag:
+      description: Permet de savoir les infos ping, etc.
+   ping:
+      description: Permet de répondre pong...
+   game:
+      description: Permet d'utiliser des commandes pour le jeu
+   silence:
+      description: Permet de bloquer le chat pour tous les joueurs
+   slow:
+      description: Permet de mettre une attente plus importante entre deux messages
+   nick:
+      description: Permet d'avoir un pseudo custom
+   plugin:
+      description: Permet de reload, disable ou enable des plugins

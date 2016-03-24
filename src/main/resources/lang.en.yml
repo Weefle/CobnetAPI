@@ -1,0 +1,29 @@
+# general
+exception: "§cWe encountered an unhandled exception. We apologize for any inconvenience."
+tab:
+   header: "§aWelcome to §6Cobnet"
+   footer: "§aShop, forum and informations on: §6§nhttps://cobnet.fr\n §aTeamSpeak: §6§nts.cobnet.fr"
+
+# chat
+chat:
+   spam: "§cPlease do not spam the chat, thank you."
+   slow: "§cThe chat is temporarily slowed down, you have to wait {0} seconds between each message."
+   closed: "§cThe chat is actually closed, so you can't send a message."
+
+# permissions
+perm_lack: "§cYou are not allowed to use this command."
+
+# game
+game:
+   countdown1: "§bThe game starts in §c{0} §bseconds"
+   countdown2: "§bThe game starts in §c{0} §bseconds"
+   join: "{0} §6{1} §ehas joined the server ({2}/{3})"
+   quit: "{0} §6{1} §7has left the server ({2}/{3})"
+   start: "§7The game starts!"
+
+   nospec: "§cThe game has already started and it does not accept spectators. Try to join an other game!"
+   cant_recon: "§cIt is too late for you to reconnect to this server"
+
+# default commands
+lag_ping: "§aYour ping§e: §6{0}§ems"
+server_lag: "§aServer's TPS (§620§a <=> no lag): {0}"

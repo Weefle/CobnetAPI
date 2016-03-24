@@ -1,0 +1,11 @@
+/.classpath
+/.project
+/.settings
+/eclipse
+/.idea
+/*.iml
+/*.ipr
+/*.iws
+/target
+/out
+/tests
