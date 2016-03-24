@@ -1,8 +1,6 @@
 Introduction
 ============
-:warning: Ceci est l'API du serveur. Tous les codes auxquels vous avez accès sont confidentiels. Il est donc interdit de les divulguer, sous peine de lourdes sanctions. :warning:
-
-[**Téléchargement du plugin**](https://gitlab.com/cobnet/cobnetapi/builds)
+Cette api a été développé par [creart_](https://twitter.com/DevCreart) et [iCroque](https://twitter.com/iCroque_com) pour Cobnet. Le projet a malheureusement été stoppé c'est pour cela que nous décidé de divulguer l'api. Vous trouverez une petite documentation dans le dossier [docs](https://github.com/remicaumette/cobnetapi/tree/master/docs).
 
 Utilisation de l'api
 ====================
