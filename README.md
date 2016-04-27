@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Introduction
 ============
 Cette api a été développé par [creart_](https://twitter.com/DevCreart) et [iCroque](https://twitter.com/iCroque_com) pour Cobnet. Le projet a malheureusement été stoppé c'est pour cela que nous décidé de divulguer l'api. Vous trouverez une petite documentation dans le dossier [docs](https://github.com/remicaumette/cobnetapi/tree/master/docs).
@@ -67,3 +68,8 @@ Fonctionnalités déjà disponible
 * Effets de particules ;
 * Cuboid ;
 * Ecoute de packets...
+=======
+# cobnetapi
+
+API du projet cobnet qui est mort :'-)
+>>>>>>> 6b16d4818b87d6fb7d42e7d60d035d08c7fe0766
