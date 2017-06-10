@@ -38,8 +38,8 @@ public class I18n {
     public static String tl(Lang lang, String key, String... values) {
         if(lang.getWords().containsKey(key)) {
             String text = lang.getWords().get(key);
+            text = text.replaceAll("&", "§");
             MessageFormat messageFormat = new MessageFormat(text);
-            text = text.replaceAll("\\{(\\D*?)\\}", "\\[$1\\]");
             return messageFormat.format(values);
         }
         return key;

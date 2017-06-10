@@ -36,7 +36,7 @@ public class ChatSendListener extends Listener {
 
         if (SilenceCommand.hasSilence()) {
             if (!player.hasPermission(Permission.getSilencePermission())) {
-                player.sendMessage(I18n.tl(cob.getLang(), "chat_closed"));
+                player.sendMessage(I18n.tl(cob.getLang(), "chat.closed"));
                 return;
             }
         }
@@ -48,9 +48,9 @@ public class ChatSendListener extends Listener {
         if (cp.getNextChat() > now()) {
             // si c'est un slow
             if (SlowCommand.hasSlow() && !player.hasPermission(Permission.getSilencePermission()))
-                player.sendMessage(I18n.tl(cob.getLang(), "chat_slow", (SlowCommand.getSlow()/1000) + ""));
+                player.sendMessage(I18n.tl(cob.getLang(), "chat.slow", (SlowCommand.getSlow()/1000) + ""));
             else
-                player.sendMessage(I18n.tl(cob.getLang(), "chat_spam"));
+                player.sendMessage(I18n.tl(cob.getLang(), "chat.spam"));
 
             return;
         }
