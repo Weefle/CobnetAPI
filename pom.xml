@@ -6,7 +6,7 @@
 
     <groupId>fr.cobnet</groupId>
     <artifactId>cobnetapi</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,26 +23,31 @@
             <name>iCroque</name>
             <email>contact@icroque.com</email>
         </developer>
+                <developer>
+            <name>Weefle</name>
+            <email>mr.weefle@gmail.com</email>
+        </developer>
     </developers>
 
     <repositories>
-        <repository>
-            <id>spigot</id>
-            <url>http://maven.elmakers.com/repository/</url>
-        </repository>
+    <repository>
+        <id>spigot-repo</id>
+        <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+    </repository>
     </repositories>
 
     <dependencies>
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot</artifactId>
-            <version>1.8.8-R0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongo-java-driver</artifactId>
-            <version>3.2.1</version>
-        </dependency>
+<dependency> <!-- Spigot (this includes Spigot API, Bukkit API, Craftbukkit and NMS) -->
+    <groupId>org.spigotmc</groupId>
+    <artifactId>spigot</artifactId>
+    <version>1.8.8-R0.1-SNAPSHOT</version>
+    <scope>provided</scope>
+</dependency>
+    <dependency>
+        <groupId>org.mongodb</groupId>
+        <artifactId>mongodb-driver</artifactId>
+        <version>3.4.2</version>
+    </dependency>
     </dependencies>
 
     <build>
@@ -50,7 +55,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>2.4.1</version>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
