@@ -1,8 +1,7 @@
 name: CobnetCore
 main: fr.cobnet.core.CobnetCore
-version: 1.1.0
-softdepend: [Cobby, ChunkNorris]
-author: Cobnet
+version: 1.1
+authors: [creart, Weefle, iCroque]
 commands:
    lag:
       description: Permet de savoir les infos ping, etc.
