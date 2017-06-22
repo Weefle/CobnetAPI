@@ -55,7 +55,6 @@ public class BasicGameListener extends Listener {
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
-        Player player = e.getPlayer();
         e.setJoinMessage("");
         getAPI().broadcast("game.join");
         Lang lang = getCobPlayer(e.getPlayer()).getLang();

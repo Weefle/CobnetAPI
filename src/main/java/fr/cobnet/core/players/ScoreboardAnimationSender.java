@@ -109,4 +109,12 @@ public class ScoreboardAnimationSender extends BukkitRunnable {
         cob.getScoreboard().setLine(15, builder.toString());
     }
 
+	public static String getAlmostFull() {
+		return almostFull;
+	}
+
+	public static void setAlmostFull(String almostFull) {
+		ScoreboardAnimationSender.almostFull = almostFull;
+	}
+
 }

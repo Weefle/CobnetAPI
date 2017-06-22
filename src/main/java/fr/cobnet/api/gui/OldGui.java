@@ -34,7 +34,7 @@ public class OldGui implements Listener {
      * @param slots int
      */
     public OldGui(Plugin plugin, String name, int slots) {
-        this.plugin = plugin;
+        this.setPlugin(plugin);
         this.name = name;
         this.slots = slots;
         this.items = new HashMap<>();
@@ -118,6 +118,14 @@ public class OldGui implements Listener {
             this.items.remove(slot);
         }
     }
+
+	public Plugin getPlugin() {
+		return plugin;
+	}
+
+	public void setPlugin(Plugin plugin) {
+		this.plugin = plugin;
+	}
 
     /*interface ClickEventHandler {
         /**

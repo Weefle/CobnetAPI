@@ -98,7 +98,7 @@ public enum OutPacketType {
         this.rawName = rawName;
         this.clazz = clazz;
         this.softPacket = softPacket;
-        this.way = Way.OUT;
+        this.setWay(Way.OUT);
 
         try {
             this.constructor = this.softPacket.getConstructor(Packet.class, Player.class);
@@ -130,4 +130,12 @@ public enum OutPacketType {
     public boolean isOutgoing() {
         return true;
     }
+
+	public Way getWay() {
+		return way;
+	}
+
+	public void setWay(Way way) {
+		this.way = way;
+	}
 }

@@ -79,7 +79,8 @@ public class ProfileLoader {
             connection.addRequestProperty("Cache-Control", "no-cache, no-store, must-revalidate");
             connection.addRequestProperty("Pragma", "no-cache");
 
-            String json = new Scanner(new BufferedInputStream(connection.getInputStream()), "UTF-8").useDelimiter("\\A").next();
+            @SuppressWarnings("resource")
+			String json = new Scanner(new BufferedInputStream(connection.getInputStream()), "UTF-8").useDelimiter("\\A").next();
             JSONParser parser = new JSONParser();
             Object obj = parser.parse(json);
             JSONArray props = (JSONArray) ((JSONObject) obj).get("properties");

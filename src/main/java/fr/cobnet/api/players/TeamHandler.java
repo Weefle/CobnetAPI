@@ -58,6 +58,7 @@ public class TeamHandler {
 					return;
 				}
 				
+				@SuppressWarnings("unused")
 				Iterator<Team> iterator = teams.iterator();
 				Team team = iterator.next();
 				for (Player player : event.getPlayers()) {

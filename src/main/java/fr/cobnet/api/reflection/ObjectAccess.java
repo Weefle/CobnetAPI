@@ -11,7 +11,8 @@ public final class ObjectAccess {
         this.object = object;
     }
 
-    public <T> T get(String field) {
+    @SuppressWarnings("unchecked")
+	public <T> T get(String field) {
         try {
             return ((T) object.getClass().getField(field).get(object));
         } catch (Exception e) {

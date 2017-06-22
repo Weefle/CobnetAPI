@@ -23,7 +23,8 @@ public class SchematicUtils {
      * @param loc > La location
      * @param schematic > Le schematic, chargée par {@link #loadSchematic(File)}
      */
-    public static void pasteSchematic(World world, Location loc, Schematic schematic) {
+    @SuppressWarnings("deprecation")
+	public static void pasteSchematic(World world, Location loc, Schematic schematic) {
         byte[] blocks = schematic.getBlocks();
         byte[] blockData = schematic.getData();
 
@@ -50,7 +51,8 @@ public class SchematicUtils {
      */
     public static Schematic loadSchematic(File file) throws IOException {
         FileInputStream input = new FileInputStream(file);
-        NBTInputStream nbtInput = new NBTInputStream(new BufferedInputStream(new GZIPInputStream(input)));
+        @SuppressWarnings("resource")
+		NBTInputStream nbtInput = new NBTInputStream(new BufferedInputStream(new GZIPInputStream(input)));
 
         CompoundTag schematic = (CompoundTag) nbtInput.readTag();
         if (!schematic.getName().equals("Schematic")) {

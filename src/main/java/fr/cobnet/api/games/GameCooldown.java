@@ -1,6 +1,5 @@
 package fr.cobnet.api.games;
 
-import fr.cobnet.api.i18n.I18n;
 import fr.cobnet.api.nms.TitleBuilder;
 import fr.cobnet.api.players.SoundUtils;
 import fr.cobnet.api.tasks.TaskRunner;

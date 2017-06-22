@@ -62,7 +62,7 @@ public abstract class Database {
      * @param collection > Le nom de la MongoCollection
      * @return MongoCollection
      */
-    public abstract MongoCollection getCollection(String collection);
+    public abstract MongoCollection<?> getCollection(String collection);
 
     /**
      * Permet de faire une query
@@ -70,6 +70,6 @@ public abstract class Database {
      * @param collection > DBCollection, la collection où il faut chercher
      * @return MongoCursor > Résultat de la recherche, ne pas oublier de faire {@link MongoCursor#close()}
      */
-    public abstract MongoCursor fetch(BasicDBObject search, MongoCollection collection);
+    public abstract MongoCursor<?> fetch(BasicDBObject search, MongoCollection<?> collection);
 
 }

@@ -42,7 +42,8 @@ public class DropSuppresserModule extends OptimisationModule {
                 if (isEnabled()) {
                     timeLeft--;
                     if (timeLeft <= 0) {
-                        int removed = 0;
+                        @SuppressWarnings("unused")
+						int removed = 0;
                         for (World world : Bukkit.getWorlds()) {
                             for (Entity ent : world.getEntities()) {
                                 if (ent.getType() == EntityType.DROPPED_ITEM || (ent.getType() == EntityType.ARROW && ((Arrow) ent).isOnGround())) {

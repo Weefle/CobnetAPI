@@ -49,7 +49,7 @@ public enum InPacketType {
         this.rawName = rawName;
         this.clazz = clazz;
         this.softPacket = softPacket;
-        this.way = Way.IN;
+        this.setWay(Way.IN);
 
         try {
             this.constructor = this.softPacket.getConstructor(Packet.class, Player.class);
@@ -81,5 +81,13 @@ public enum InPacketType {
     public boolean isOutgoing() {
         return false;
     }
+
+	public Way getWay() {
+		return way;
+	}
+
+	public void setWay(Way way) {
+		this.way = way;
+	}
 
 }

@@ -23,7 +23,8 @@ public class I18n {
             plugin.getLogger().warning("Le fichier lang."+ lang.getCode().toLowerCase() +".yml n'existe pas !");
             return;
         }
-        FileConfiguration configuration = YamlConfiguration.loadConfiguration(langIn);
+        @SuppressWarnings("deprecation")
+		FileConfiguration configuration = YamlConfiguration.loadConfiguration(langIn);
         for(String l : configuration.getRoot().getKeys(true)) {
             lang.getWords().put(l, configuration.getString(l));
         }

@@ -15,7 +15,7 @@ public class PacketPlayOutPlayerInfo extends SentPacket {
         super(packet, player);
     }
 
-    public List getProfile() {
+    public List<?> getProfile() {
         return reflection().get("b");
     }
 

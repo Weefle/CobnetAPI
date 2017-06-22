@@ -25,7 +25,7 @@ class GradeTask implements Runnable {
             t.setPrefix(rank.getFrenchPrefix());
             teams.put(rank.getId(), t);
         }*/
-        scoreboard = new Scoreboard();
+        setScoreboard(new Scoreboard());
 
         task = Bukkit.getScheduler().scheduleSyncRepeatingTask(CobnetCore.getInstance(), this, 0, 20);
         use = true;
@@ -53,7 +53,8 @@ class GradeTask implements Runnable {
             CobPlayer.all().stream().forEach(player -> {
 
                 if (!player.hasDisplayRankLoaded()) {
-                    PacketPlayOutScoreboardTeam team = new PacketPlayOutScoreboardTeam();
+                    @SuppressWarnings("unused")
+					PacketPlayOutScoreboardTeam team = new PacketPlayOutScoreboardTeam();
 
                 }
 
@@ -72,5 +73,21 @@ class GradeTask implements Runnable {
     private void stop() {
         Bukkit.getScheduler().cancelTask(task);
     }
+
+	public Scoreboard getScoreboard() {
+		return scoreboard;
+	}
+
+	public void setScoreboard(Scoreboard scoreboard) {
+		this.scoreboard = scoreboard;
+	}
+
+	public Map<Integer, Team> getTeams() {
+		return teams;
+	}
+
+	public void setTeams(Map<Integer, Team> teams) {
+		this.teams = teams;
+	}
 
 }

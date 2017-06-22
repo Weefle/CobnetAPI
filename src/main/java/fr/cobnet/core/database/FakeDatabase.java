@@ -73,12 +73,12 @@ public class FakeDatabase extends Database {
     }
 
     @Override
-    public MongoCollection getCollection(String collection) {
+    public MongoCollection<?> getCollection(String collection) {
         return null;
     }
 
     @Override
-    public MongoCursor fetch(BasicDBObject search, MongoCollection collection) {
+    public MongoCursor<?> fetch(BasicDBObject search, MongoCollection<?> collection) {
         return null;
     }
 
