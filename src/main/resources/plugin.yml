@@ -1,6 +1,6 @@
 name: CobnetCore
 main: fr.cobnet.core.CobnetCore
-version: 1.1
+version: 1.2
 authors: [creart, Weefle, iCroque]
 commands:
    lag:
