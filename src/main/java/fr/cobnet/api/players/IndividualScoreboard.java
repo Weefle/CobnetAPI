@@ -1,13 +1,13 @@
 package fr.cobnet.api.players;
 
 import fr.cobnet.api.lang.ReflectionUtils;
-import net.minecraft.server.v1_8_R3.IScoreboardCriteria;
-import net.minecraft.server.v1_8_R3.Packet;
-import net.minecraft.server.v1_8_R3.PacketPlayOutScoreboardDisplayObjective;
-import net.minecraft.server.v1_8_R3.PacketPlayOutScoreboardObjective;
-import net.minecraft.server.v1_8_R3.PacketPlayOutScoreboardScore;
+import net.minecraft.server.v1_12_R1.IScoreboardCriteria;
+import net.minecraft.server.v1_12_R1.Packet;
+import net.minecraft.server.v1_12_R1.PacketPlayOutScoreboardDisplayObjective;
+import net.minecraft.server.v1_12_R1.PacketPlayOutScoreboardObjective;
+import net.minecraft.server.v1_12_R1.PacketPlayOutScoreboardScore;
 import org.apache.commons.lang3.Validate;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 public class IndividualScoreboard {

@@ -1,9 +1,12 @@
 package fr.cobnet.api.i18n;
 
+import org.apache.commons.io.IOUtils;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;
-
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.text.MessageFormat;
 
@@ -16,15 +19,19 @@ public class I18n {
      * Permet d'ajouter le support d'une langue à un plugin.
      * @param plugin Plugin
      * @param lang Lang
+     * @throws IOException 
      */
-    public static void supportTranslate(Plugin plugin, Lang lang) {
+    public static void supportTranslate(Plugin plugin, Lang lang) throws IOException {
         InputStream langIn = plugin.getResource("lang."+ lang.getCode().toLowerCase() +".yml");
         if(langIn == null) {
             plugin.getLogger().warning("Le fichier lang."+ lang.getCode().toLowerCase() +".yml n'existe pas !");
             return;
         }
-        @SuppressWarnings("deprecation")
-		FileConfiguration configuration = YamlConfiguration.loadConfiguration(langIn);
+        File file = new File("config");
+        FileOutputStream fo = new FileOutputStream(file);
+        IOUtils.copy(langIn, fo);
+        fo.close();
+		FileConfiguration configuration = YamlConfiguration.loadConfiguration(file);
         for(String l : configuration.getRoot().getKeys(true)) {
             lang.getWords().put(l, configuration.getString(l));
         }

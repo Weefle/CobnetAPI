@@ -6,8 +6,8 @@ import fr.cobnet.api.packets.InPacketType;
 import fr.cobnet.api.packets.ReceivedPacket;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.chat.ComponentSerializer;
-import net.minecraft.server.v1_8_R3.IChatBaseComponent;
-import net.minecraft.server.v1_8_R3.Packet;
+import net.minecraft.server.v1_12_R1.IChatBaseComponent;
+import net.minecraft.server.v1_12_R1.Packet;
 import org.bukkit.entity.Player;
 
 /**

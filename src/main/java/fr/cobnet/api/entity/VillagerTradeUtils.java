@@ -1,12 +1,12 @@
 package fr.cobnet.api.entity;
 
 import java.lang.reflect.Field;
-import net.minecraft.server.v1_8_R3.EntityVillager;
-import net.minecraft.server.v1_8_R3.MerchantRecipe;
-import net.minecraft.server.v1_8_R3.MerchantRecipeList;
+import net.minecraft.server.v1_12_R1.EntityVillager;
+import net.minecraft.server.v1_12_R1.MerchantRecipe;
+import net.minecraft.server.v1_12_R1.MerchantRecipeList;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftVillager;
-import org.bukkit.craftbukkit.v1_8_R3.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftVillager;
+import org.bukkit.craftbukkit.v1_12_R1.inventory.CraftItemStack;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Villager;
 import org.bukkit.inventory.ItemStack;
@@ -183,7 +183,7 @@ public class VillagerTradeUtils {
      *
      * @param item
      */
-    private static net.minecraft.server.v1_8_R3.ItemStack convertItemStack(ItemStack item) {
+    private static net.minecraft.server.v1_12_R1.ItemStack convertItemStack(ItemStack item) {
         if (item == null)
             return null;
         return CraftItemStack.asNMSCopy(item);

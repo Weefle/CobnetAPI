@@ -2,9 +2,9 @@ package fr.cobnet.api.packets.in;
 
 import fr.cobnet.api.packets.InPacketType;
 import fr.cobnet.api.packets.ReceivedPacket;
-import net.minecraft.server.v1_8_R3.BlockPosition;
-import net.minecraft.server.v1_8_R3.Packet;
-import net.minecraft.server.v1_8_R3.Vector3f;
+import net.minecraft.server.v1_12_R1.BlockPosition;
+import net.minecraft.server.v1_12_R1.Packet;
+import net.minecraft.server.v1_12_R1.Vector3f;
 import org.bukkit.entity.Player;
 
 /**

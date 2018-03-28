@@ -4,10 +4,10 @@ import fr.cobnet.api.i18n.Lang;
 import fr.cobnet.api.lang.ReflectionUtils;
 import java.util.HashMap;
 import java.util.Map;
-import net.minecraft.server.v1_8_R3.PacketPlayOutScoreboardTeam;
-import net.minecraft.server.v1_8_R3.ScoreboardTeam;
+import net.minecraft.server.v1_12_R1.PacketPlayOutScoreboardTeam;
+import net.minecraft.server.v1_12_R1.ScoreboardTeam;
 import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 /**

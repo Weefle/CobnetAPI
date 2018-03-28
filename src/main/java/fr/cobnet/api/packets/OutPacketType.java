@@ -1,9 +1,9 @@
 package fr.cobnet.api.packets;
 
-import net.minecraft.server.v1_8_R3.*;
-import net.minecraft.server.v1_8_R3.PacketPlayOutEntity.PacketPlayOutEntityLook;
-import net.minecraft.server.v1_8_R3.PacketPlayOutEntity.PacketPlayOutRelEntityMove;
-import net.minecraft.server.v1_8_R3.PacketPlayOutEntity.PacketPlayOutRelEntityMoveLook;
+import net.minecraft.server.v1_12_R1.*;
+import net.minecraft.server.v1_12_R1.PacketPlayOutEntity.PacketPlayOutEntityLook;
+import net.minecraft.server.v1_12_R1.PacketPlayOutEntity.PacketPlayOutRelEntityMove;
+import net.minecraft.server.v1_12_R1.PacketPlayOutEntity.PacketPlayOutRelEntityMoveLook;
 import org.bukkit.entity.Player;
 
 import java.lang.reflect.Constructor;
@@ -45,7 +45,7 @@ public enum OutPacketType {
     LOGIN("Login", fr.cobnet.api.packets.out.PacketPlayOutLogin.class, PacketPlayOutLogin.class),
     MAP("Map", fr.cobnet.api.packets.out.PacketPlayOutMap.class, PacketPlayOutMap.class),
     MAP_CHUNK("MapChunk", fr.cobnet.api.packets.out.PacketPlayOutMapChunk.class, PacketPlayOutMapChunk.class),
-    MAP_CHUNK_BULK("MapChunkBulk", fr.cobnet.api.packets.out.PacketPlayOutMapChunkBulk.class, PacketPlayOutMapChunkBulk.class),
+    //MAP_CHUNK_BULK("MapChunkBulk", fr.cobnet.api.packets.out.PacketPlayOutMapChunkBulk.class, PacketPlayOutMapChunkBulk.class),
     MULTI_BLOCK_CHANGE("MultiBlockChange", fr.cobnet.api.packets.out.PacketPlayOutMultiBlockChange.class, PacketPlayOutMultiBlockChange.class),
     NAMED_ENTITY_SPAWN("NamedEntitySpawn", fr.cobnet.api.packets.out.PacketPlayOutNamedEntitySpawn.class, PacketPlayOutNamedEntitySpawn.class),
     NAMED_SOUND_EFFECT("NamedSoundEffect", fr.cobnet.api.packets.out.PacketPlayOutNamedSoundEffect.class, PacketPlayOutNamedSoundEffect.class),
@@ -64,7 +64,7 @@ public enum OutPacketType {
     SCOREBOARD_SCORE("ScoreboardScore", fr.cobnet.api.packets.out.PacketPlayOutScoreboardScore.class, PacketPlayOutScoreboardScore.class),
     SCOREBOARD_TEAM("ScoreboardTeam", fr.cobnet.api.packets.out.PacketPlayOutScoreboardTeam.class, PacketPlayOutScoreboardTeam.class),
     SERVER_DIFFICULTY("ServerDifficulty", fr.cobnet.api.packets.out.PacketPlayOutServerDifficulty.class, PacketPlayOutServerDifficulty.class),
-    SET_COMPRESSION("SetCompression", fr.cobnet.api.packets.out.PacketPlayOutSetCompression.class, PacketPlayOutSetCompression.class),
+    //SET_COMPRESSION("SetCompression", fr.cobnet.api.packets.out.PacketPlayOutSetCompression.class, PacketPlayOutSetCompression.class),
     SET_SLOT("SetSlot", fr.cobnet.api.packets.out.PacketPlayOutSetSlot.class, PacketPlayOutSetSlot.class),
     SPAWN_ENTITY("SpawnEntity", fr.cobnet.api.packets.out.PacketPlayOutSpawnEntity.class, PacketPlayOutSpawnEntity.class),
     SPAWN_ENTITY_EXPERIENCE_ORB("SpawnEntityExperienceOrb", fr.cobnet.api.packets.out.PacketPlayOutSpawnEntityExperienceOrb.class, PacketPlayOutSpawnEntityExperienceOrb.class),
@@ -78,9 +78,9 @@ public enum OutPacketType {
     TITLE("Title", fr.cobnet.api.packets.out.PacketPlayOutTitle.class, PacketPlayOutTitle.class),
     TRANSACTION("Transaction", fr.cobnet.api.packets.out.PacketPlayOutTransaction.class, PacketPlayOutTransaction.class),
     UPDATE_ATTRIBUTES("UpdateAttributes", fr.cobnet.api.packets.out.PacketPlayOutUpdateAttributes.class, PacketPlayOutUpdateAttributes.class),
-    UPDATE_ENTITY_NBT("UpdateEntityNBT", fr.cobnet.api.packets.out.PacketPlayOutUpdateEntityNBT.class, PacketPlayOutUpdateEntityNBT.class),
+    //UPDATE_ENTITY_NBT("UpdateEntityNBT", fr.cobnet.api.packets.out.PacketPlayOutUpdateEntityNBT.class, PacketPlayOutUpdateEntityNBT.class),
     UPDATE_HEALTH("UpdateHealth", fr.cobnet.api.packets.out.PacketPlayOutUpdateHealth.class, PacketPlayOutUpdateHealth.class),
-    UPDATE_SIGN("UpdateSign", fr.cobnet.api.packets.out.PacketPlayOutUpdateSign.class, PacketPlayOutUpdateSign.class),
+    //UPDATE_SIGN("UpdateSign", fr.cobnet.api.packets.out.PacketPlayOutUpdateSign.class, PacketPlayOutUpdateSign.class),
     UPDATE_TIME("UpdateTime", fr.cobnet.api.packets.out.PacketPlayOutUpdateTime.class, PacketPlayOutUpdateTime.class),
     WINDOW_DATA("WindowData", fr.cobnet.api.packets.out.PacketPlayOutWindowData.class, PacketPlayOutWindowData.class),
     WINDOW_ITEMS("WindowItems", fr.cobnet.api.packets.out.PacketPlayOutWindowItems.class, PacketPlayOutWindowItems.class),

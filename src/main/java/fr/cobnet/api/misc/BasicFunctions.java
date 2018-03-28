@@ -4,8 +4,8 @@ import fr.cobnet.api.i18n.I18n;
 import fr.cobnet.api.i18n.Lang;
 import fr.cobnet.core.CobnetCore;
 import fr.cobnet.core.players.CobPlayer;
-import net.minecraft.server.v1_8_R3.Packet;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import net.minecraft.server.v1_12_R1.Packet;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 public class BasicFunctions {

@@ -2,11 +2,11 @@ package fr.cobnet.api.nms;
 
 import fr.cobnet.core.CobnetCore;
 import fr.cobnet.core.players.CobPlayer;
-import net.minecraft.server.v1_8_R3.IChatBaseComponent;
-import net.minecraft.server.v1_8_R3.PacketPlayOutChat;
-import net.minecraft.server.v1_8_R3.PlayerConnection;
+import net.minecraft.server.v1_12_R1.IChatBaseComponent;
+import net.minecraft.server.v1_12_R1.PacketPlayOutChat;
+import net.minecraft.server.v1_12_R1.PlayerConnection;
 import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 import java.util.Collection;
@@ -46,11 +46,11 @@ public class ActionBarBuilder {
 
     public void sendTo(Player player) {
         PlayerConnection connection = ((CraftPlayer) player).getHandle().playerConnection;
-        PacketPlayOutChat packet = new PacketPlayOutChat(buildChatComponent(this.message), (byte) 2);
+        PacketPlayOutChat packet = new PacketPlayOutChat(buildChatComponent(this.message));
         connection.sendPacket(packet);
         if(this.stay != 0) {
             Bukkit.getScheduler().runTaskLater(CobnetCore.getInstance(), () -> {
-                PacketPlayOutChat clear = new PacketPlayOutChat(buildChatComponent(""), (byte) 2);
+                PacketPlayOutChat clear = new PacketPlayOutChat(buildChatComponent(""));
                 connection.sendPacket(clear);
             }, this.stay * 20L);
         }

@@ -2,9 +2,9 @@ package fr.cobnet.api.packets.in;
 
 import fr.cobnet.api.packets.InPacketType;
 import fr.cobnet.api.packets.ReceivedPacket;
-import net.minecraft.server.v1_8_R3.BlockPosition;
-import net.minecraft.server.v1_8_R3.EnumDirection;
-import net.minecraft.server.v1_8_R3.Packet;
+import net.minecraft.server.v1_12_R1.BlockPosition;
+import net.minecraft.server.v1_12_R1.EnumDirection;
+import net.minecraft.server.v1_12_R1.Packet;
 import org.bukkit.entity.Player;
 
 /**
@@ -24,7 +24,7 @@ public class PacketPlayInBlockDig extends ReceivedPacket {
         return reflection().get("b");
     }
 
-    public net.minecraft.server.v1_8_R3.PacketPlayInBlockDig.EnumPlayerDigType getDigType() {
+    public net.minecraft.server.v1_12_R1.PacketPlayInBlockDig.EnumPlayerDigType getDigType() {
         return reflection().get("c");
     }
 
@@ -36,7 +36,7 @@ public class PacketPlayInBlockDig extends ReceivedPacket {
         reflection().set("b", direction);
     }
 
-    public void setDigType(net.minecraft.server.v1_8_R3.PacketPlayInBlockDig.EnumPlayerDigType type) {
+    public void setDigType(net.minecraft.server.v1_12_R1.PacketPlayInBlockDig.EnumPlayerDigType type) {
         reflection().set("c", type);
     }
 

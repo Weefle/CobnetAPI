@@ -2,9 +2,9 @@ package fr.cobnet.api.packets.in;
 
 import fr.cobnet.api.packets.InPacketType;
 import fr.cobnet.api.packets.ReceivedPacket;
-import net.minecraft.server.v1_8_R3.ItemStack;
-import net.minecraft.server.v1_8_R3.Packet;
-import org.bukkit.craftbukkit.v1_8_R3.inventory.CraftItemStack;
+import net.minecraft.server.v1_12_R1.ItemStack;
+import net.minecraft.server.v1_12_R1.Packet;
+import org.bukkit.craftbukkit.v1_12_R1.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
 
 /**

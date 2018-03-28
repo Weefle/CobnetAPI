@@ -2,7 +2,7 @@ package fr.cobnet.api.packets;
 
 import fr.cobnet.api.misc.LazyInitialiser;
 import fr.cobnet.api.reflection.ObjectAccess;
-import net.minecraft.server.v1_8_R3.Packet;
+import net.minecraft.server.v1_12_R1.Packet;
 import org.bukkit.entity.Player;
 
 /**

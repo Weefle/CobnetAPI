@@ -2,15 +2,17 @@ package fr.cobnet.api.entity;
 
 import java.lang.reflect.Field;
 import java.util.UUID;
-import net.minecraft.server.v1_8_R3.EntityInsentient;
-import net.minecraft.server.v1_8_R3.PathEntity;
-import net.minecraft.server.v1_8_R3.PathfinderGoal;
-import net.minecraft.server.v1_8_R3.PathfinderGoalFloat;
-import net.minecraft.server.v1_8_R3.PathfinderGoalSelector;
+
+import net.minecraft.server.v1_12_R1.BlockPosition;
+import net.minecraft.server.v1_12_R1.EntityInsentient;
+import net.minecraft.server.v1_12_R1.PathEntity;
+import net.minecraft.server.v1_12_R1.PathfinderGoal;
+import net.minecraft.server.v1_12_R1.PathfinderGoalFloat;
+import net.minecraft.server.v1_12_R1.PathfinderGoalSelector;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftLivingEntity;
-import org.bukkit.craftbukkit.v1_8_R3.util.UnsafeList;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftLivingEntity;
+import org.bukkit.craftbukkit.v1_12_R1.util.UnsafeList;
 import org.bukkit.entity.LivingEntity;
 
 public class PetUtils {
@@ -80,7 +82,7 @@ public class PetUtils {
                 return path != null;
             }
             Location targetLocation = Bukkit.getPlayer(p).getLocation();
-            boolean flag = this.entity.getNavigation().m();
+            boolean flag = this.entity.getNavigation().a(BlockPosition.ZERO);
             this.entity.getNavigation();
             this.path = this.entity.getNavigation().a(
                     targetLocation.getX() + 1, targetLocation.getY(),

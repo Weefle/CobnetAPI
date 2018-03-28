@@ -133,7 +133,8 @@ public class HeadBuilder {
      * Return the item.
      * @return ItemStack
      */
-    public ItemStack build() {
+    @SuppressWarnings("deprecation")
+	public ItemStack build() {
         ItemStack item = new ItemStack(Material.SKULL_ITEM, this.amount, (short) SkullType.PLAYER.ordinal());
         SkullMeta meta = (SkullMeta) item.getItemMeta();
         meta.setLore(this.lore);

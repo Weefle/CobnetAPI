@@ -3,7 +3,7 @@ package fr.cobnet.api.packets.out;
 import fr.cobnet.api.packets.OutPacketType;
 import fr.cobnet.api.packets.SentPacket;
 import java.util.List;
-import net.minecraft.server.v1_8_R3.Packet;
+import net.minecraft.server.v1_12_R1.Packet;
 import org.bukkit.entity.Player;
 
 /**

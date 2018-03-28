@@ -4,13 +4,13 @@ import fr.cobnet.api.i18n.I18n;
 import fr.cobnet.api.i18n.Lang;
 import fr.cobnet.core.CobnetCore;
 import fr.cobnet.core.players.CobPlayer;
-import net.minecraft.server.v1_8_R3.EntityArmorStand;
-import net.minecraft.server.v1_8_R3.PacketPlayOutEntityDestroy;
-import net.minecraft.server.v1_8_R3.PacketPlayOutSpawnEntityLiving;
+import net.minecraft.server.v1_12_R1.EntityArmorStand;
+import net.minecraft.server.v1_12_R1.PacketPlayOutEntityDestroy;
+import net.minecraft.server.v1_12_R1.PacketPlayOutSpawnEntityLiving;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_12_R1.CraftWorld;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -161,7 +161,7 @@ public class HologramBuilder {
         stand.setLocation(location.getX(), location.getY(), location.getZ(), 0, 0);
         stand.setCustomName(translation ? I18n.tl(lang, message, values) : message);
         stand.setCustomNameVisible(true);
-        stand.setGravity(false);
+        stand.setNoGravity(true);
         stand.setInvisible(true);
         return stand;
     }

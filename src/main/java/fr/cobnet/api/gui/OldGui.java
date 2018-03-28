@@ -20,10 +20,11 @@ public class OldGui implements Listener {
 
     private static List<OldGui> guis = new ArrayList<>();
 
-    private Plugin plugin;
     private String name;
     private int slots;
     private HashMap<Integer, ItemStack> items;
+
+	private Plugin plugin;
     //private ClickEventHandler clickHandler;
     //private OpenEventHandler openHandler;
     //private CloseEventHandler closeHandler;
@@ -34,7 +35,7 @@ public class OldGui implements Listener {
      * @param slots int
      */
     public OldGui(Plugin plugin, String name, int slots) {
-        this.setPlugin(plugin);
+    	this.setPlugin(plugin);
         this.name = name;
         this.slots = slots;
         this.items = new HashMap<>();

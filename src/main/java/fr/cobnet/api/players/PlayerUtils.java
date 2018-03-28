@@ -5,13 +5,13 @@ import com.mojang.authlib.GameProfile;
 import fr.cobnet.api.lang.ReflectionUtils;
 import fr.cobnet.core.CobnetCore;
 import fr.cobnet.core.players.ProfileLoader;
-import net.minecraft.server.v1_8_R3.EntityPlayer;
-import net.minecraft.server.v1_8_R3.PacketPlayOutResourcePackSend;
+import net.minecraft.server.v1_12_R1.EntityPlayer;
+import net.minecraft.server.v1_12_R1.PacketPlayOutResourcePackSend;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
@@ -25,7 +25,7 @@ public class PlayerUtils {
      * @param b
      */
     public static void setEntityCollision(Player player, Boolean b) {
-        ((CraftPlayer) player).getHandle().collidesWithEntities = b;
+        ((CraftPlayer) player).getHandle().collides = b;
     }
 
 
@@ -78,7 +78,12 @@ public class PlayerUtils {
      * @param amount
      */
     public static void setArrowInBody(Player player, byte amount) {
-        ((CraftPlayer) player).getHandle().getDataWatcher().watch(9, amount);
+        try {
+			((CraftPlayer) player).getHandle().getDataWatcher().wait(9, amount);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     /**
@@ -96,7 +101,8 @@ public class PlayerUtils {
      *
      * @param player
      */
-    public static void razPlayer(Player player) {
+    @SuppressWarnings("deprecation")
+	public static void razPlayer(Player player) {
         player.setMaxHealth(20);
         player.setFoodLevel(20);
         player.setSaturation(20);
@@ -113,7 +119,8 @@ public class PlayerUtils {
      *
      * @param player
      */
-    public static void clearFullInventory(Player player) {
+    @SuppressWarnings("deprecation")
+	public static void clearFullInventory(Player player) {
         player.closeInventory();
         player.getInventory().clear();
         player.setItemInHand(new ItemStack(Material.AIR));
@@ -128,7 +135,8 @@ public class PlayerUtils {
      *
      * @param player
      */
-    public static void resetPlayer(Player player) {
+    @SuppressWarnings("deprecation")
+	public static void resetPlayer(Player player) {
         player.setMaxHealth(20);
         player.setHealth(20);
         player.setFoodLevel(20);
@@ -151,7 +159,8 @@ public class PlayerUtils {
      *
      * @param player
      */
-    public static void clearInventory(Player player) {
+    @SuppressWarnings("deprecation")
+	public static void clearInventory(Player player) {
         player.closeInventory();
         player.getInventory().clear();
         player.setItemInHand(new ItemStack(Material.AIR));

@@ -21,7 +21,8 @@ public class GuiListener extends Listener {
         Listener.register(CobnetCore.getInstance(), new GuiListener());
     }
 
-    @EventHandler
+    @SuppressWarnings("deprecation")
+	@EventHandler
     public void onItemClick(PlayerInteractEvent event) {
         if (event.getPlayer().getItemInHand() == null || event.getPlayer().getItemInHand().getType() == Material.AIR) return;
         if (InventoryHandle.getRawList().size() > 500) {
@@ -44,7 +45,8 @@ public class GuiListener extends Listener {
         }
     }
 
-    private void react(Stream<InventoryHandle> stream, PlayerInteractEvent event) {
+    @SuppressWarnings("deprecation")
+	private void react(Stream<InventoryHandle> stream, PlayerInteractEvent event) {
         stream.filter(inventory -> inventory.isValidOpener(event.getPlayer().getItemInHand())).forEach(inventoryHandle -> {
             if (event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.LEFT_CLICK_BLOCK) {
                 inventoryHandle.onLeftClickItem(event.getPlayer());

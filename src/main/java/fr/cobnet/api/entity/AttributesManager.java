@@ -1,11 +1,11 @@
 package fr.cobnet.api.entity;
 
 import com.google.common.annotations.Beta;
-import net.minecraft.server.v1_8_R3.AttributeInstance;
-import net.minecraft.server.v1_8_R3.AttributeModifier;
-import net.minecraft.server.v1_8_R3.EntityLiving;
-import net.minecraft.server.v1_8_R3.GenericAttributes;
-import org.bukkit.craftbukkit.v1_8_R3.entity.CraftLivingEntity;
+import net.minecraft.server.v1_12_R1.AttributeInstance;
+import net.minecraft.server.v1_12_R1.AttributeModifier;
+import net.minecraft.server.v1_12_R1.EntityLiving;
+import net.minecraft.server.v1_12_R1.GenericAttributes;
+import org.bukkit.craftbukkit.v1_12_R1.entity.CraftLivingEntity;
 import org.bukkit.entity.LivingEntity;
 
 import java.util.UUID;

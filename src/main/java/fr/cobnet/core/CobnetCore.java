@@ -17,6 +17,8 @@ import fr.cobnet.core.listeners.InvisblePlayerFixListener;
 import fr.cobnet.core.listeners.ProjectileListener;
 import fr.cobnet.core.players.CobPlayer;
 import fr.cobnet.core.servers.FakeServer;
+
+import java.io.IOException;
 import java.util.Collection;
 import java.util.logging.Level;
 import org.bukkit.Bukkit;
@@ -67,8 +69,18 @@ public class CobnetCore extends JavaPlugin {
 
         PacketHandler.getInstance();
 
-        I18n.supportTranslate(this, Lang.FRENCH);
-        I18n.supportTranslate(this, Lang.ENGLISH);
+        try {
+			I18n.supportTranslate(this, Lang.FRENCH);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        try {
+			I18n.supportTranslate(this, Lang.ENGLISH);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
         loadClasses();
 

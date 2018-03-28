@@ -65,7 +65,7 @@ public class GameCooldown implements Runnable {
 
             if ((untilStart % 10 == 0 && untilStart < 31) || untilStart % 30 == 0) {
                 CobnetCore.getInstance().broadcast("game.countdown1", untilStart + "");
-                SoundUtils.playSoundForAll(Sound.SUCCESSFUL_HIT, 10, untilStart/2);
+                SoundUtils.playSoundForAll(Sound.ENTITY_ARROW_HIT_PLAYER, 10, untilStart/2);
             }
 
             else if(this.untilStart <= 5) {
@@ -73,7 +73,7 @@ public class GameCooldown implements Runnable {
                         .withTitle((untilStart <= 3 ? "§c" : "§e") + untilStart)
                         .withSubtitle("game.countdown2");
                 title.sendTo(Bukkit.getOnlinePlayers());
-                SoundUtils.playSoundForAll(Sound.CLICK, 10, untilStart);
+                SoundUtils.playSoundForAll(Sound.BLOCK_LEVER_CLICK, 10, untilStart);
             }
 
             untilStart--;

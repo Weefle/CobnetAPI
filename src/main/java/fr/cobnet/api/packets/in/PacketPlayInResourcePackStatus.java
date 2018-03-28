@@ -2,7 +2,7 @@ package fr.cobnet.api.packets.in;
 
 import fr.cobnet.api.packets.InPacketType;
 import fr.cobnet.api.packets.ReceivedPacket;
-import net.minecraft.server.v1_8_R3.Packet;
+import net.minecraft.server.v1_12_R1.Packet;
 import org.bukkit.entity.Player;
 
 /**
@@ -19,7 +19,7 @@ public class PacketPlayInResourcePackStatus extends ReceivedPacket {
         return InPacketType.RESOURCE_PACK_STATUS;
     }
 
-    public net.minecraft.server.v1_8_R3.PacketPlayInResourcePackStatus.EnumResourcePackStatus getStatus() {
+    public net.minecraft.server.v1_12_R1.PacketPlayInResourcePackStatus.EnumResourcePackStatus getStatus() {
         return reflection().get("b");
     }
 
