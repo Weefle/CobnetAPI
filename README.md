@@ -20,7 +20,7 @@ Conseils pour votre plugin
 ==========================
 
 * Pour rendre votre plugin plus maintenanble, il est préférable de commenter le code ;
-* Utiliser [maven] (https://maven.apache.org/) pour gérez vos dépendances ;
+* Utiliser [maven](https://maven.apache.org) pour gérez vos dépendances ;
 * Organiser vos packages :
 	* ```listeners``` 
 	* ```commands```
