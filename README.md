@@ -1,6 +1,6 @@
 Introduction
 ============
-Cette api a été développé par [creart_](https://twitter.com/DevCreart) et [iCroque](https://twitter.com/iCroque_com) pour Cobnet. Le projet a malheureusement été stoppé c'est pour cela que nous décidé de divulguer l'api. Vous trouverez une petite documentation dans le dossier [docs](https://github.com/remicaumette/cobnetapi/tree/master/docs).
+Cette api a été développé par [creart_](https://twitter.com/Creaaart) et [iCroque](https://twitter.com/remicaumette) pour Cobnet. Le projet a malheureusement été stoppé c'est pour cela que nous décidé de divulguer l'api. Vous trouverez une petite documentation dans le dossier [docs](https://github.com/Weefle/CobnetAPI/tree/master/docs).
 
 Utilisation de l'api
 ====================
